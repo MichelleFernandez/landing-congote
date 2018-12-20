@@ -1,0 +1,20 @@
+$break-xs: 320px !default;
+$break-sm: 375px !default;
+$break-md: 768px !default;
+$break-lg: 1366px !default;
+
+@mixin break($break) {
+  @if $break == 'xs' { @media (min-width: 0        ) and (max-width: $break-xs - 1) { @content; } }
+  @if $break == 'sm' { @media (min-width: $break-xs) and (max-width: $break-sm - 1) { @content; } }
+  @if $break == 'md' { @media (min-width: $break-sm) and (max-width: $break-md - 1) { @content; } }
+  @if $break == 'lg' { @media (min-width: $break-md) and (max-width: $break-lg - 1) { @content; } }
+
+  @if $break == 'le-sm' { @media (max-width: $break-sm - 1) { @content; } }
+  @if $break == 'le-md' { @media (max-width: $break-md - 1) { @content; } }
+  @if $break == 'le-lg' { @media (max-width: $break-lg - 1) { @content; } }
+
+  @if $break == 'gt-xs' { @media (min-width: $break-xs) { @content; } }
+  @if $break == 'gt-sm' { @media (min-width: $break-sm) { @content; } }
+  @if $break == 'gt-md' { @media (min-width: $break-md) { @content; } }
+  @if $break == 'gt-lg' { @media (min-width: $break-lg) { @content; } }
+}

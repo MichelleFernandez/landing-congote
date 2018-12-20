@@ -1,0 +1,51 @@
+/* Fonts */ 
+
+/* mobile sizes */
+$m-default: 16px;
+$m-heading-1: 36px; 
+$m-heading-2: 28px;
+$m-heading-3: 20px;
+$m-button: 18px;
+
+/* desktop sizes */
+$d-default: 20px;
+$d-heading-1: 64px;
+$d-heading-2: 50px;
+$d-button: 22px;
+
+$font-weights: extrabold, bold, semibold, regular, light, hairline;
+$font-styles: italic, normal, oblique;
+
+@mixin font($family: main, $weight: regular, $style: normal, $size: m-default, $color: $gray-main) {
+  @if $family == main {
+    font-family: 'Raleway', sans-serif;
+  }
+  @else if $family == secondary {
+    font-family: 'Paytone One', sans-serif;
+  } @else {
+    font-family: $family;
+  }
+
+  @if $weight == hairline {
+    font-weight: 200;
+  }
+  @else if $weight == light {
+    font-weight: 300;
+  }
+  @else if $weight == regular {
+    font-weight: 400;
+  }
+  @else if $weight == semibold {
+    font-weight: 500;
+  }
+  @else if $weight == bold {
+    font-weight: bold;
+  }
+  @else if $weight == extrabold {
+    font-weight: 900;
+  }
+  
+  font-size: $size;
+  font-style: $style;
+  color: $color;
+}

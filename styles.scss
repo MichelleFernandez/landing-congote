@@ -1,0 +1,42 @@
+@import 'media';
+@import 'colors';
+@import 'fonts';
+@import 'buttons';
+
+body {
+  @include font();
+}
+
+nav {
+  background-color: $orange-main;
+  height: 200px;
+}
+
+#hero {
+  height: 100vh;
+  background-color: $orange-main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    text-align: center;
+  }
+
+  h1 {
+    @include font($family: secondary, $size: $m-heading-1, $color: white);
+    line-height: 44px;
+
+    @include break('gt-md') {
+      font-size: $d-heading-1;
+    }
+  }
+
+  h3 {
+    @include font($size: $m-heading-3, $color: white);
+  }
+
+
+}
+
+/* Buttons */

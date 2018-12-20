@@ -1,0 +1,51 @@
+/* Colors */
+/* Fonts */
+/* mobile sizes */
+/* desktop sizes */
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: m-default;
+  font-style: normal;
+  color: #202020;
+}
+
+nav {
+  background-color: #ff5b2e;
+  height: 200px;
+}
+
+#hero {
+  height: 100vh;
+  background-color: #ff5b2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#hero .content {
+  text-align: center;
+}
+#hero h1 {
+  font-family: "Paytone One", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  font-style: normal;
+  color: white;
+  line-height: 44px;
+}
+@media (min-width: 768px) {
+  #hero h1 {
+    font-size: 64px;
+  }
+}
+#hero h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  color: white;
+}
+
+/* Buttons */
+
+/*# sourceMappingURL=styles.css.map */

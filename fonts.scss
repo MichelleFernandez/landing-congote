@@ -1,17 +1,20 @@
 /* Fonts */ 
 
 /* mobile sizes */
-$m-default: 16px;
-$m-heading-1: 36px; 
-$m-heading-2: 28px;
-$m-heading-3: 20px;
-$m-button: 18px;
+$m-default:     16px;
+$m-default-sm:  14px;
+$m-default-lg:  17px;
+$m-smallest:    10px;
+$m-heading-1:   36px; 
+$m-heading-2:   28px;
+$m-heading-3:   20px;
+$m-button:      18px;
 
 /* desktop sizes */
-$d-default: 20px;
-$d-heading-1: 64px;
-$d-heading-2: 50px;
-$d-button: 22px;
+$d-default:     20px;
+$d-heading-1:   64px;
+$d-heading-2:   50px;
+$d-button:      22px;
 
 $font-weights: extrabold, bold, semibold, regular, light, hairline;
 $font-styles: italic, normal, oblique;

@@ -16,7 +16,7 @@ $d-button: 22px;
 $font-weights: extrabold, bold, semibold, regular, light, hairline;
 $font-styles: italic, normal, oblique;
 
-@mixin font($family: main, $weight: regular, $style: normal, $size: m-default, $color: $gray-main) {
+@mixin font($family: main, $weight: regular, $style: normal, $size: $m-default, $color: $gray-main) {
   @if $family == main {
     font-family: 'Raleway', sans-serif;
   }

@@ -5,13 +5,55 @@
 
 body {
   @include font();
+
+  @include break('gt-md') {
+    font-size: $d-default;
+  }
 }
 
+h1 {
+  @include font($family: secondary, $size: $m-heading-1, $color: white);
+  line-height: 44px;
+  text-align: center;
+
+  @include break('gt-md') {
+    font-size: $d-heading-1;
+  }
+}
+
+h2 {
+  @include font($family: secondary, $size: $m-heading-2, $color: $gray-main);
+  line-height: 30px;
+  text-align: center;
+
+  @include break('gt-md') {
+    font-size: $d-heading-2;
+  }
+}
+
+h3 {
+  @include font($size: $m-heading-3, $weight: semibold, $color: white);
+}
+
+.container {
+  @include break('gt-md') {
+    margin: 0 217px;
+  }
+}
+
+section {
+  height: 100vh;
+  min-height: 750px;
+  padding-top: 131px;
+}
+
+/* navbar */
 nav {
   background-color: $orange-main;
   height: 20vh;
 }
 
+/* hero */
 #hero {
   height: 80vh;
   background-color: $orange-main;
@@ -32,21 +74,96 @@ nav {
       margin-bottom: 10px;
     }
   }
+}
 
-  h1 {
-    @include font($family: secondary, $size: $m-heading-1, $color: white);
-    line-height: 44px;
+/* what-you-need */
+#what-you-need {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    @include break('gt-md') {
-      font-size: $d-heading-1;
+  p { text-align: center; }
+
+  @include break('le-sm') {
+    h1 { max-width: 247px; }
+
+    p {
+      max-width: 274px;
+      margin: 0 auto;
     }
   }
 
-  h3 {
-    @include font($size: $m-heading-3, $weight: semibold, $color: white);
+  #features-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .feature-item {
+      .feature-visual {
+        width: 130px;
+        height: 130px;
+        background-color: $green-darker-4;
+        border-radius: 100%;
+        margin: 0 auto;
+      }
+
+      p { max-width: 130px; }
+    }
   }
-
-
 }
 
-/* Buttons */
+#about-us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background-color: $gray-main;
+  color: white;
+
+  h2 { color: white; }
+
+  #founders {
+    display: flex;
+    flex-direction: column;
+
+    .founder-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  
+      .founder-avatar {
+        width: 160px;
+        height: 160px;
+        background-color: $gray-lighter-1;
+        border-radius: 100%;
+        align-self: center;
+        margin-bottom: 10px;
+      }
+
+      span {
+        @include font($weight: bold, $color: white);
+        text-align: center;
+      }
+      
+      p {
+        color: $gray-lighter-4;
+        text-align: center;
+      }
+    }
+
+    .founder-item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    @include break('gt-sm') {
+      flex-direction: row;
+      
+      .founder-item:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 56px;
+      }
+    }
+  }
+
+}

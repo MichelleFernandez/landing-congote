@@ -1,7 +1,7 @@
-$break-xs: 320px !default;
-$break-sm: 375px !default;
-$break-md: 768px !default;
-$break-lg: 1366px !default;
+$break-xs: 321px !default;
+$break-sm: 376px !default;
+$break-md: 769px !default;
+$break-lg: 1367px !default;
 
 @mixin break($break) {
   @if $break == 'xs' { @media (min-width: 0        ) and (max-width: $break-xs - 1) { @content; } }
@@ -17,4 +17,14 @@ $break-lg: 1366px !default;
   @if $break == 'gt-sm' { @media (min-width: $break-sm) { @content; } }
   @if $break == 'gt-md' { @media (min-width: $break-md) { @content; } }
   @if $break == 'gt-lg' { @media (min-width: $break-lg) { @content; } }
+}
+
+$media-queries: (xs: 'xs', gt-xs: 'gt-xs', sm: 'sm', le-sm: 'le-sm', gt-sm: 'gt-sm', md: 'md', gt-md: 'gt-md', lg: 'lg', xl: 'xl');
+
+@each $media, $query in $media-queries {
+  [hide-#{$media}] {
+    @include break($query) {
+      display: none !important;
+    }
+  }
 }

@@ -249,5 +249,18 @@ footer {
     .email { @include font($weight: medium, $color: white, $size: 14px); }
     .phone { margin: 13px 0 0 0; }
   }
+
   .copyright { @include font($weight: medium, $color: $gray-lighter-4, $size: $m-smallest); }
+
+  @include break('gt-sm') {
+    flex-direction: row;
+    height: 307px;
+    min-height: 0;
+
+    hr {
+      width: 2px;
+      height: 150px;
+      margin: 0;
+    }
+  }
 }

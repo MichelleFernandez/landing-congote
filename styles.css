@@ -355,5 +355,17 @@ footer .copyright {
   font-style: normal;
   color: #9e9e9e;
 }
+@media (min-width: 376px) {
+  footer {
+    flex-direction: row;
+    height: 307px;
+    min-height: 0;
+  }
+  footer hr {
+    width: 2px;
+    height: 150px;
+    margin: 0;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

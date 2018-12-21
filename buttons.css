@@ -23,4 +23,9 @@ button {
   background-image: linear-gradient(108deg, #edff54, #c9de2e);
 }
 
+.filled {
+  background-color: #ff5b2e;
+  border: none;
+}
+
 /*# sourceMappingURL=buttons.css.map */

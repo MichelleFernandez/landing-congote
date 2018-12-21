@@ -75,6 +75,11 @@ button {
   background-image: linear-gradient(108deg, #edff54, #c9de2e);
 }
 
+.filled {
+  background-color: #ff5b2e;
+  border: none;
+}
+
 body {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
@@ -133,9 +138,21 @@ h3 {
 }
 
 section {
-  height: 100vh;
+  height: 100%;
   min-height: 750px;
   padding-top: 131px;
+}
+section.half {
+  height: 50%;
+  min-height: 325px;
+  padding-top: 100px;
+}
+section.stretch {
+  min-height: 0;
+}
+section .content {
+  display: flex;
+  justify-content: center;
 }
 
 /* navbar */
@@ -165,11 +182,6 @@ nav {
 }
 
 /* what-you-need */
-#what-you-need {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 #what-you-need p {
   text-align: center;
 }
@@ -198,11 +210,8 @@ nav {
   max-width: 130px;
 }
 
+/* about-us */
 #about-us {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   background-color: #202020;
   color: white;
 }
@@ -242,12 +251,31 @@ nav {
   margin-bottom: 32px;
 }
 @media (min-width: 376px) {
-  #about-us #founders {
-    flex-direction: row;
+  #about-us #founders .founder-item {
+    flex-direction: column;
   }
   #about-us #founders .founder-item:not(:last-child) {
     margin-bottom: 0;
     margin-right: 56px;
+  }
+}
+@media (min-width: 376px) {
+  #about-us #founders {
+    flex-direction: row;
+  }
+}
+
+/* partnerships-awards, book-your-space */
+#partnership-awards, #book-your-space {
+  background-color: #202020;
+}
+#partnership-awards h2, #book-your-space h2 {
+  color: white;
+}
+@media (max-width: 375px) {
+  #partnership-awards h2, #book-your-space h2 {
+    max-width: 237px;
+    margin: 0 auto;
   }
 }
 

@@ -112,7 +112,11 @@ nav {
     flex-direction: row;
     justify-content: space-between;
 
-    .feature-item {
+    .feature-item {      
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+
       .feature-visual {
         width: 130px;
         height: 130px;
@@ -199,6 +203,26 @@ nav {
   }
 }
 
+#partnership-awards {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-row {
+    display: flex;
+    flex-direction: row;
+
+    .item:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    .trip-advisor img {
+      width: 66px;
+    }
+  }
+}
+
 /* footer */
 footer {
   height: 100%;
@@ -256,11 +280,19 @@ footer {
     flex-direction: row;
     height: 307px;
     min-height: 0;
+    flex-wrap: wrap;
 
     hr {
       width: 2px;
       height: 150px;
       margin: 0;
+    }
+
+    .copyright {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 51px;
     }
   }
 }
